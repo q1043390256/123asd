@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt" value="嘿嘿">
+
+<script>
+  var txt = document.getElementById("txt"); //找到标签
+
+  //当input获取到焦点的时候
+  txt.onfocus = function () {     //当鼠标选中时
+    //把input里的内容清空
+    txt.value = "";               //文本框是空的
+  }
+
+  //当input失去焦点的时候
+  txt.onblur = function () {      //当鼠标未选中时
+    //判断用户是否输入了内容，如果没有输入内容
+    if (txt.value.trim() == "") {   //如果里面没有内容
+      // 把input里的内容再设置为嘿嘿
+      txt.value = "嘿嘿";           //文本框显示"嘿嘿" 
+    }
+  }
+</script>
+</body>
+</html>
